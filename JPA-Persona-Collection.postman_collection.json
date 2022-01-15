@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "c5f5c019-d57d-443a-a266-31d19fa89525",
+		"name": "JPA-Persona-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Modificacion",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8049/persona/update?id=2&nombre=Nadia Tristana&apellido=Melendez Quiñones&dni=99999999&empleado=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8049",
+					"path": [
+						"persona",
+						"update"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						},
+						{
+							"key": "nombre",
+							"value": "Nadia Tristana"
+						},
+						{
+							"key": "apellido",
+							"value": "Melendez Quiñones"
+						},
+						{
+							"key": "dni",
+							"value": "99999999"
+						},
+						{
+							"key": "empleado",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Baja",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8049/persona/delete?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8049",
+					"path": [
+						"persona",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8049/persona/create?nombre=Juan Carlos&apellido=Jimenez Díaz&dni=78548596&empleado=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8049",
+					"path": [
+						"persona",
+						"create"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Juan Carlos"
+						},
+						{
+							"key": "apellido",
+							"value": "Jimenez Díaz"
+						},
+						{
+							"key": "dni",
+							"value": "78548596"
+						},
+						{
+							"key": "empleado",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar Personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8049/persona/read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8049",
+					"path": [
+						"persona",
+						"read"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
