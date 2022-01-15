@@ -1,0 +1,2 @@
+-Importar, preferencia en el IDE STS como Maven Project (Import -> Maven -> Existing Maven Projects)
+-Se asignó el puerto 8049, el collection de postman tiene todo configurado para las pruebas
