@@ -1,2 +1,3 @@
 -Importar, preferencia en el IDE STS como Maven Project (Import -> Maven -> Existing Maven Projects)
 -Se asignó el puerto 8049, el collection de postman tiene todo configurado para las pruebas
+-Utilicé la interfaz "CrudRepository" de Spring para implementar el CRUD y "Lombok" para la reducción de código en la entidad Persona.
