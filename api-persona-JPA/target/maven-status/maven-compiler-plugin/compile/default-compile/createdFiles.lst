@@ -1,0 +1,11 @@
+pe\com\bcp\controller\PersonaController.class
+pe\com\bcp\config\Configuration.class
+pe\com\bcp\domain\Persona$PersonaBuilder.class
+pe\com\bcp\controller\util\Utils.class
+pe\com\bcp\domain\dao\IPersistence.class
+pe\com\bcp\domain\Persona.class
+pe\com\bcp\domain\reponse\SofttekException.class
+pe\com\bcp\ApiPersonaJpaApplication.class
+pe\com\bcp\business\usecase\PersonaServiceImpl.class
+pe\com\bcp\config\OAuthToken.class
+pe\com\bcp\business\port\IPersonaService.class

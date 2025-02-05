@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: pe.com.bcp.ApiPersonaJpaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.725 s - in pe.com.bcp.ApiPersonaJpaApplicationTests

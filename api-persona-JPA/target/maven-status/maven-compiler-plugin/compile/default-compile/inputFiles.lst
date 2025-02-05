@@ -1,0 +1,10 @@
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\domain\Persona.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\config\OAuthToken.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\controller\PersonaController.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\business\port\IPersonaService.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\ApiPersonaJpaApplication.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\config\Configuration.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\controller\util\Utils.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\business\usecase\PersonaServiceImpl.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\domain\reponse\SofttekException.java
+C:\repos\java-projects\api-persona-JPA\src\main\java\pe\com\bcp\domain\dao\IPersistence.java
