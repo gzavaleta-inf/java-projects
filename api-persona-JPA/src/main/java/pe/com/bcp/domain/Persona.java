@@ -30,10 +30,16 @@ public class Persona {
 	
 	@Column(name="apellido")
 	private String apellido;
+
+	@Column(name="completo")
+	private String completo;
 	
 	@Column(name="dni")
 	private String dni;
 	
 	@Column(name="empleado")
 	private boolean empleado;
+
+	@Column(name="clave")
+	private String clave;
 }

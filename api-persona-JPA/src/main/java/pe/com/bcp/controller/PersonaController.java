@@ -9,11 +9,15 @@ import com.nimbusds.jose.JOSEException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
+import org.springframework.security.oauth2.core.OAuth2Error;
 import org.springframework.web.bind.annotation.*;
 
 import pe.com.bcp.business.port.IPersonaService;
 import pe.com.bcp.config.OAuthToken;
 import pe.com.bcp.domain.Persona;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @RestController
 @RequestMapping (path="/persona")
@@ -25,23 +29,38 @@ public class PersonaController {
 	@Autowired
 	private OAuthToken oAuthToken;
 
-	@GetMapping(path="/read")
-	public ResponseEntity<List<Persona>> getPersonas() {
-		
-		return new ResponseEntity<>(methodsService.getPersonas(), HttpStatus.OK);
+	@GetMapping(path="/readAll")
+	public Mono<List<Persona>> getPersonas() {
+
+
+		return Mono.just(methodsService.getPersonas());
+	}
+
+	@GetMapping(path="/read-by-id")
+	public Mono<List<Persona>> getPersonaById(
+			@RequestParam(value = "id") int id
+	) {
+
+		return Mono.just(methodsService.getPersonaById(id));
+	}
+
+	@GetMapping(path="/concat-names")
+	public Mono<List<Persona>> getPersonaConcatNames() {
+
+		return Mono.just(methodsService.getPersonasConcatNames());
 	}
 	
 	@PostMapping(path="/create")
-	public ResponseEntity<String> agregarPersona(
+	public Flux<String> agregarPersona(
 			@RequestHeader(name = "Authorization") String authorization,
 			@RequestBody String jsonPersona
 			) throws JsonProcessingException {
 
 		if (oAuthToken.checkValidToken(authorization)){
-			return new ResponseEntity<>(methodsService.addPersona(jsonPersona), HttpStatus.OK);
+			return Flux.just(methodsService.addPersona(jsonPersona));
 		}
 		else {
-			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
+			throw new OAuth2AuthenticationException(new OAuth2Error("invalid_token"));
 		}
 	}
 	
@@ -61,5 +80,12 @@ public class PersonaController {
 			) {
 		
 		return new ResponseEntity<>(methodsService.updatePersona(id, nombre, apellido, dni, empleado), HttpStatus.OK);
+	}
+
+	@GetMapping(path="/generar-clave")
+	public Flux<String> generarClave(
+			@RequestParam(value = "id") int id
+	) {
+		return Flux.just(methodsService.generarClave(id));
 	}
 }

@@ -8,7 +8,10 @@ import pe.com.bcp.domain.Persona;
 public interface IPersonaService {
 
 	public List<Persona> getPersonas();
+	public List<Persona> getPersonasConcatNames();
+	public List<Persona> getPersonaById(int id);
 	public String addPersona(String jsonPersona) throws JsonProcessingException;
+	public String generarClave(int id);
 	public String removePersona(Integer id);
 	public String updatePersona(Integer id, String nombre, String apellido, String dni, boolean empleado);
 	
