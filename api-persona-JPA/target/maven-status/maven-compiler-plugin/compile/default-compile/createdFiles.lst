@@ -1,6 +1,5 @@
 pe\com\bcp\controller\PersonaController.class
 pe\com\bcp\domain\SemillaResponse.class
-pe\com\bcp\config\Configuration.class
 pe\com\bcp\domain\reponse\HandleException.class
 pe\com\bcp\domain\Persona$PersonaBuilder.class
 pe\com\bcp\domain\SemillaResponse$SemillaResponseBuilder.class
